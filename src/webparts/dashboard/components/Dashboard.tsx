@@ -98,9 +98,25 @@ const Dashboard: React.FC<IDashboardProps> = ({
   return (
     <div className={styles.dashboardContainer}>
 
-      <h1 className={styles.pageTitle}>
-        Employee Training Enrollment Portal
-      </h1>
+      <div className={styles.headerCard}>
+
+  <div>
+
+    <h1 className={styles.pageTitle}>
+      Employee Training Portal
+    </h1>
+
+    {/* <div className={styles.pageSubTitle}>
+      Learn • Upskill • Grow
+    </div>
+
+  </div>
+
+  <div className={styles.userBadge}>
+    👤 {userName}
+  </div> */}
+
+</div>
 
       {/* <div className={styles.quoteCard}>
         <div className={styles.quoteText}>
@@ -123,35 +139,31 @@ const Dashboard: React.FC<IDashboardProps> = ({
 
       <div className={styles.sectionCard}>
 
-        <Pivot
-          linkFormat="tabs"
-          linkSize="large"
-        >
+<Pivot
+  linkFormat="tabs"
+  linkSize="large"
+>
 
-          <PivotItem
-            headerText="Available Trainings"
-          >
-            <div style={{ marginTop: "10px" }}>
-              <AvailableTrainings
-                sp={sp}
-                userName={userName}
-                userEmail={userEmail}
-              />
-            </div>
-          </PivotItem>
+  <PivotItem
+    headerText="📚 Available Trainings"
+  >
+    <AvailableTrainings
+      sp={sp}
+      userName={userName}
+      userEmail={userEmail}
+    />
+  </PivotItem>
 
-          <PivotItem
-            headerText="My Registrations"
-          >
-            <div style={{ marginTop: "10px" }}>
-              <MyRegistrations
-                sp={sp}
-                userEmail={userEmail}
-              />
-            </div>
-          </PivotItem>
+  <PivotItem
+    headerText="🎓 My Registrations"
+  >
+    <MyRegistrations
+      sp={sp}
+      userEmail={userEmail}
+    />
+  </PivotItem>
 
-        </Pivot>
+</Pivot>
 
       </div>
 

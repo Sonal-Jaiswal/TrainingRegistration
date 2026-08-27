@@ -70,16 +70,26 @@ const DashboardStats: React.FC<IDashboardStatsProps> = ({
 
   }, [sp, userEmail]);
 
+// const cardStyle: React.CSSProperties = {
+//   background: "#fff",
+//   borderRadius: "12px",
+//   padding: "10px",
+//   height: "70px",
+
+//   borderLeft: "4px solid #0070ad",
+
+//   boxShadow:
+//     "0 2px 8px rgba(0,0,0,.08)"
+// };
+
 const cardStyle: React.CSSProperties = {
-  background: "#fff",
-  borderRadius: "12px",
-  padding: "10px",
-  height: "70px",
-
-  borderLeft: "4px solid #0070ad",
-
+  background: "#ffffff",
+  borderRadius: "16px",
+  padding: "16px",
+  borderTop: "4px solid #0078d4",
   boxShadow:
-    "0 2px 8px rgba(0,0,0,.08)"
+    "0 4px 12px rgba(0,0,0,.08)",
+  minWidth: "160px"
 };
 
   return (

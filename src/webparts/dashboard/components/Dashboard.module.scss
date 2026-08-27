@@ -1,159 +1,163 @@
-// .dashboardContainer {
-//   font-family:
-//     "Segoe UI",
-//     Inter,
-//     sans-serif;
+:global(.ms-Pivot) {
+  background: #f4f6fb;
+  padding: 6px;
+  border-radius: 40px;
+  display: inline-flex;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
 
-//   background: #f4f7fc;
-//   min-height: 100vh;
-//   padding: 12px;
-// }
+:global(.ms-Pivot-link) {
+  border-radius: 30px !important;
+  min-width: 200px;
+  height: 42px;
 
-// .pageTitle {
-//   font-size: 30px;
-//   font-weight: 700;
+  transition: all .35s ease !important;
 
-//   background: linear-gradient(
-//     90deg,
-//     #0070ad,
-//     #6f2dbd
-//   );
+  color: #444 !important;
+  font-weight: 600 !important;
 
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
+  background: transparent !important;
+}
 
-//   margin-bottom: 12px;
-// }
-// .quoteCard {
-//   background: linear-gradient(
-//     135deg,
-//     #0070ad,
-//     #6a1b9a
-//   );
+:global(.ms-Pivot-link:hover) {
+  background: rgba(0,120,212,.08) !important;
+}
 
-//   color: white;
-//   padding: 10px 15px;
-//   border-radius: 8px;
-//   margin-bottom: 10px;
+:global(.ms-Pivot-link.is-selected) {
 
-//   box-shadow:
-//     0px 3px 10px rgba(0, 0, 0, 0.15);
-// }
+  background: linear-gradient(
+    135deg,
+    #0078d4,
+    #6f2dbd
+  ) !important;
 
-// .quoteText {
-//   font-size: 14px;
-//   font-style: italic;
-// }
+  color: white !important;
 
-// .quoteAuthor {
-//   margin-top: 5px;
-//   font-size: 12px;
-// }
+  transform: translateY(-1px);
 
-// .sectionCard {
-//   background: white;
-//   border-radius: 12px;
-//   padding: 12px;
-//   margin-top: 10px;
+  box-shadow:
+    0 6px 18px rgba(0,120,212,.25);
+}
 
-//   box-shadow:
-//     0 2px 10px rgba(0,0,0,.08);
-// }
+:global(.ms-Pivot-link.is-selected::before) {
+  display: none !important;
+}
 
-// // .sectionCard {
-// //   background: white;
-// //   border-radius: 8px;
-// //   padding: 10px;
-// //   margin-top: 10px;
+:global(.ms-Pivot-text) {
+  font-size: 14px;
+  font-weight: 600;
+}
 
-// //   box-shadow:
-// //     0px 2px 8px rgba(0, 0, 0, 0.08);
-// // }
 
-// .sectionTitle {
-//   color: #0070ad;
-//   font-size: 18px;
-//   font-weight: 600;
-//   margin: 0 0 8px 0;
-// }
 
 
 
 .dashboardContainer {
-  padding: 12px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f7fa;
   min-height: 100vh;
-  background: #f4f7fc;
-  font-family: "Segoe UI", sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .pageTitle {
   font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-
-  background: linear-gradient(
-    90deg,
-    #0070ad,
-    #6f2dbd
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin: 0;
+  color: white;
 }
 
-.quoteCard {
+.pageSubTitle {
+  margin-top: 8px;
+  opacity: .9;
+  font-size: 14px;
+}
+
+.headerCard {
   background: linear-gradient(
     135deg,
-    #0070ad,
-    #6f2dbd
+    #0078d4,
+    #005a9e
   );
 
   color: white;
 
-  border-radius: 16px;
+  padding: 24px;
 
-  padding: 15px;
+  border-radius: 12px;
 
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, .15);
+    0 4px 12px rgba(0, 0, 0, .12);
 }
 
-.quoteText {
+.userBadge {
+  background-color:
+    rgba(255,255,255,.18);
+
+  padding: 10px 16px;
+
+  border-radius: 20px;
+
   font-size: 14px;
-  font-style: italic;
-}
-
-.quoteAuthor {
-  margin-top: 5px;
-  font-size: 12px;
-  opacity: .9;
 }
 
 .sectionCard {
   background: white;
 
-  border-radius: 16px;
+  border-radius: 12px;
 
-  padding: 12px;
+  padding: 20px;
 
-  margin-top: 12px;
+  margin-top: 20px;
 
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, .08);
+    0 2px 8px rgba(0,0,0,.07);
 }
 
 .sectionTitle {
-  font-size: 20px;
+  margin: 0 0 15px 0;
+
+  font-size: 22px;
 
   font-weight: 600;
 
-  color: #0070ad;
+  color: #323130;
+}
 
-  border-bottom: 3px solid #0070ad;
+.quoteCard {
+  background:
+    linear-gradient(
+      135deg,
+      #0078d4,
+      #6a1b9a
+    );
 
-  padding-bottom: 8px;
+  color: white;
 
-  margin-bottom: 15px;
+  border-radius: 12px;
+
+  padding: 16px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.13);
+}
+
+.quoteText {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.quoteAuthor {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .9;
 }
