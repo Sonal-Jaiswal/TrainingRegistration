@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "training-schedule-client-side-solution",
+    "id": "68765261-b0ef-43db-b554-dfd4310c3fcb",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "TrainingSchedule description"
+      },
+      "longDescription": {
+        "default": "TrainingSchedule description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "training-schedule Feature",
+        "description": "The feature that activates elements of the training-schedule solution.",
+        "id": "9313cf50-6a4b-4d97-a549-09c01c73a3d6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/training-schedule.sppkg"
+  }
+}

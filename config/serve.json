@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+ "initialPage":
+"https://capgemini.sharepoint.com/sites/spfxdemo/_layouts/workbench.aspx"
+}
+
+
+
+// {
+//  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfxserve.schema.json",
+//  "port": 4322,
+//  "https": true,
+
+// }
+// 7. Run pro

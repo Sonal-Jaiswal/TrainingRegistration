@@ -1,0 +1,159 @@
+// .dashboardContainer {
+//   font-family:
+//     "Segoe UI",
+//     Inter,
+//     sans-serif;
+
+//   background: #f4f7fc;
+//   min-height: 100vh;
+//   padding: 12px;
+// }
+
+// .pageTitle {
+//   font-size: 30px;
+//   font-weight: 700;
+
+//   background: linear-gradient(
+//     90deg,
+//     #0070ad,
+//     #6f2dbd
+//   );
+
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+
+//   margin-bottom: 12px;
+// }
+// .quoteCard {
+//   background: linear-gradient(
+//     135deg,
+//     #0070ad,
+//     #6a1b9a
+//   );
+
+//   color: white;
+//   padding: 10px 15px;
+//   border-radius: 8px;
+//   margin-bottom: 10px;
+
+//   box-shadow:
+//     0px 3px 10px rgba(0, 0, 0, 0.15);
+// }
+
+// .quoteText {
+//   font-size: 14px;
+//   font-style: italic;
+// }
+
+// .quoteAuthor {
+//   margin-top: 5px;
+//   font-size: 12px;
+// }
+
+// .sectionCard {
+//   background: white;
+//   border-radius: 12px;
+//   padding: 12px;
+//   margin-top: 10px;
+
+//   box-shadow:
+//     0 2px 10px rgba(0,0,0,.08);
+// }
+
+// // .sectionCard {
+// //   background: white;
+// //   border-radius: 8px;
+// //   padding: 10px;
+// //   margin-top: 10px;
+
+// //   box-shadow:
+// //     0px 2px 8px rgba(0, 0, 0, 0.08);
+// // }
+
+// .sectionTitle {
+//   color: #0070ad;
+//   font-size: 18px;
+//   font-weight: 600;
+//   margin: 0 0 8px 0;
+// }
+
+
+
+.dashboardContainer {
+  padding: 12px;
+  min-height: 100vh;
+  background: #f4f7fc;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #0070ad,
+    #6f2dbd
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quoteCard {
+  background: linear-gradient(
+    135deg,
+    #0070ad,
+    #6f2dbd
+  );
+
+  color: white;
+
+  border-radius: 16px;
+
+  padding: 15px;
+
+  margin-bottom: 12px;
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, .15);
+}
+
+.quoteText {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.quoteAuthor {
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: .9;
+}
+
+.sectionCard {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 12px;
+
+  margin-top: 12px;
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, .08);
+}
+
+.sectionTitle {
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #0070ad;
+
+  border-bottom: 3px solid #0070ad;
+
+  padding-bottom: 8px;
+
+  margin-bottom: 15px;
+}
