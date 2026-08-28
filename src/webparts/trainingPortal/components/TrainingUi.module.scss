@@ -1,0 +1,130 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+}
+
+.modalTitle { margin: 0 0 20px; font-size: 23px; color: #323130; }
+.modalButtons { display: flex; gap: 12px; margin-top: 25px; flex-wrap: wrap; }
+.modalTraining { background: #edf7f7; border-left: 4px solid #007f86; padding: 15px; margin-bottom: 20px; }
+
+.dashboardStats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.statCard { background: #ffffff; padding: 18px; border-radius: 8px; text-align: center; }
+.statNumber { font-size: 28px; font-weight: 700; color: #007f86; }
+.statLabel { color: #52666d; }
+
+@media (max-width: 768px) {
+  .dashboardStats {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  .statCard {
+    padding: 14px;
+  }
+  .statNumber {
+    font-size: 22px;
+  }
+  .statLabel {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statCard {
+    padding: 12px;
+  }
+  .statNumber {
+    font-size: 18px;
+  }
+}
+
+.dashboardHeader {
+  background: linear-gradient(135deg, #007f86, #12343b);
+  color: #ffffff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+  }
+}
+.headerTitle { margin: 0 0 8px; font-size: 28px; font-weight: 600; }
+.headerSubtitle { margin: 0; font-size: 15px; opacity: 0.9; }
+.userBadge { display: flex; flex-direction: column; align-items: center; gap: 10px; position: relative; }
+.avatarButton { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.85); background: #ffffff; color: #007f86; font-size: 17px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18); }
+.profilePanel { position: absolute; top: 64px; right: 0; width: 210px; padding: 14px; background: #ffffff; color: #12343b; border-radius: 8px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); z-index: 10; text-align: left; }
+.profileName { margin: 0; font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profileLabel { margin: 5px 0 0; color: #52666d; font-size: 12px; }
+
+@media (max-width: 480px) {
+  .profilePanel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+.progressSection { margin-bottom: 18px; }
+.progressHeader { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px; }
+.progressLabel { color: #605e5c; font-weight: 600; }
+.progressValue { color: #323130; font-weight: 600; }
+.progressTrack { height: 10px; background: #edebe9; border-radius: 5px; overflow: hidden; }
+.progressFill { height: 100%; background: #0078d4; transition: width 300ms ease; }
+.progressFillComplete { background: #107c10; }
+.modules { border-top: 1px solid #edebe9; padding-top: 14px; margin-bottom: 18px; }
+.modulesHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.modulesTitle { color: #12343b; font-size: 14px; }
+.modulesCount { color: #52666d; font-size: 12px; }
+.modulesGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+.module { display: flex; align-items: center; gap: 7px; padding: 7px 8px; background: #f8fafb; color: #52666d; font-size: 12px; cursor: pointer; }
+.moduleComplete { background: #f1faf0; color: #107c10; }
+
+@media (max-width: 480px) {
+  .modulesGrid {
+    grid-template-columns: 1fr;
+  }
+  .module {
+    padding: 10px;
+  }
+}
