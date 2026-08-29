@@ -1,17 +1,10 @@
 import * as React from 'react';
-
 import * as ReactDom from 'react-dom';
-
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-
 import TrainingDashboard from './components/TrainingDashboard';
-
 import WelcomePage from './components/WelcomePage';
-
 import { ITrainingPortalProps } from './components/ITrainingPortalProps';
-
 import { getSP } from './components/pnpjsConfig';
-
 export interface ITrainingPortalWebPartProps {
 
   description: string;
@@ -22,7 +15,6 @@ export default class TrainingPortalWebPart
 
   extends BaseClientSideWebPart<ITrainingPortalWebPartProps> {
 
-  // Keeps the welcome page visible until the user opens the dashboard.
   private showWelcomePage: boolean = true;
 
   public render(): void {

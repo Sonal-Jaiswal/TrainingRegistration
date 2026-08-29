@@ -8,6 +8,49 @@ Short summary on functionality and used technologies.
 
 ## Used SharePoint Framework Version
 
+Project flow
+```mermaid
+flowchart TD
+    A[User opens SharePoint page] --> B[SPFx web part loads]
+    B --> C[TrainingPortalWebPart.ts]
+    C --> D{Welcome page or dashboard?}
+    D -- Yes --> E[WelcomePage.tsx]
+    D -- No --> F[TrainingDashboard.tsx]
+
+    F --> G[TrainingDataService.ts]
+    G --> H[PnPjs client]
+    H --> I[SharePoint lists]
+
+    I --> J[Trainings-SAR]
+    I --> K[Enrollments-SAR]
+    I --> L[UserRoles-SAR]
+
+    J --> M[Display training cards]
+    K --> N[Display enrolled courses]
+    L --> O[Resolve user role]
+
+    F --> P[EnrollmentService.ts]
+    P --> Q[Check seats]
+    P --> R[Add enrollment]
+    P --> S[Update available seats]
+
+    F --> T[TrainingService.ts]
+    T --> U[Create, update, delete training]
+    T --> V[Role-based authorization]
+
+    M --> W[User clicks Enroll]
+    W --> P
+    P --> X[UI updates immediately]
+```
+
+Tech Stack
+- TypeScript (~5.x)
+- React 17
+- SPFx (SharePoint Framework) Web Part
+- @fluentui/react for UI controls
+- @pnp/sp for SharePoint REST access
+- Gulp for SPFx build tasks
+
 ![version](https://img.shields.io/badge/version-1.21.0-green.svg)
 
 ## Applies to

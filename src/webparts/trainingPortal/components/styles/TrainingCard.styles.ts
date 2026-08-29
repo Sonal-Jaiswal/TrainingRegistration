@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const styles: { [key: string]: any } = {
+const styles: Record<string, React.CSSProperties> = {
   card: {
     backgroundColor: "#ffffff",
     border: "1px solid #d9e2e7",
@@ -64,10 +63,6 @@ const styles: { [key: string]: any } = {
   detailValue: {
     color: "#12343b",
     textAlign: "right"
-  },
-  enrollButton: {
-    width: "100%",
-    borderRadius: "6px"
   }
 };
 

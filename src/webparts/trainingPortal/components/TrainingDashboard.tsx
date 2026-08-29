@@ -1,7 +1,5 @@
-// React is used to create the dashboard component and manage its state.
 import * as React from "react";
 
-// Fluent UI provides the buttons, fields, messages, and loading indicator.
 import {
  TextField,
  Dropdown,
@@ -12,13 +10,10 @@ import {
  SpinnerSize
 } from "@fluentui/react";
 
-// Defines the properties received from the SharePoint web part.
 import { ITrainingPortalProps } from "./ITrainingPortalProps";
 
-// Displays the current user's enrolled courses and progress.
 import MyCourses from "./MyCourses";
 
-// Provides the TypeScript models used for SharePoint data.
 import {
  IEnrollment,
  ITraining,
@@ -28,10 +23,12 @@ import {
 import {
  TrainingService
 } from "./TrainingService";
+
 import {
  getTrainings,
  getEnrollments
 } from "../services/TrainingDataService";
+
 import {
  enrollCurrentUser,
  cancelEnrollment
@@ -59,68 +56,52 @@ const TrainingPortal: React.FC<ITrainingPortalProps> = (props) => {
  // Stores the configured PnPjs client for SharePoint requests.
  const [sp, setSp] = React.useState<SPFI | null>(null);
 
- // Stores all training records loaded from the Trainings-SAR list.
  const [trainings, setTrainings] =
    React.useState<ITraining[]>([]);
 
- // Stores all enrollment records loaded from the Enrollments-SAR list.
  const [enrollments, setEnrollments] =
    React.useState<IEnrollment[]>([]);
 
- // Controls the initial loading state shown while SharePoint data is fetched.
  const [loading, setLoading] =
    React.useState<boolean>(true);
 
- // Prevents duplicate actions while enrollment or cancellation is processing.
  const [submitting, setSubmitting] =
    React.useState<boolean>(false);
 
- // Stores an error message displayed in the error message bar.
- const [error, setError] =
+   const [error, setError] =
    React.useState<string>("");
 
- // Stores a success message displayed after a completed action.
  const [success, setSuccess] =
    React.useState<string>("");
 
- // Stores the text entered in the training search field.
  const [searchText, setSearchText] =
    React.useState<string>("");
 
- // Stores the category currently selected in the category dropdown.
  const [selectedCategory, setSelectedCategory] =
    React.useState<string>("All");
 
- // Stores the training selected for enrollment confirmation.
  const [selectedTraining, setSelectedTraining] =
    React.useState<ITraining | null>(null);
 
  // (modal visibility is driven by `selectedTraining`)
 
- // Controls whether My Courses or the training catalog is displayed.
  const [showMyCourses, setShowMyCourses] =
    React.useState<boolean>(false);
 
- // Controls the Admin-only management and reporting view.
  const [showAdminBoard, setShowAdminBoard] =
    React.useState<boolean>(false);
 
- // Stores the display name of the current SharePoint user.
  const [employeeName, setEmployeeName] =
    React.useState<string>("");
 
-  // Stores the numeric id of the current SharePoint user.
   const [currentUserId, setCurrentUserId] = React.useState<number | null>(null);
 
- // Stores the current user's resolved RBAC role.
  const [userRole, setUserRole] =
    React.useState<UserRole>("Employee");
 
- // Controls the compact profile panel shown from the avatar.
  const [showProfile, setShowProfile] =
    React.useState<boolean>(false);
 
- // Controls the Admin training create form.
  const [showTrainingForm, setShowTrainingForm] =
    React.useState<boolean>(false);
 
@@ -177,7 +158,7 @@ const employeeInitials: string = employeeName
      try {
        setLoading(true);
        setError("");
-       // Current SharePoint user
+  
        const currentUser =
          await sp.web.currentUser();
        setEmployeeName(
@@ -189,14 +170,13 @@ const employeeInitials: string = employeeName
        const role: UserRole =
          await trainingService.getCurrentUserRole();
        setUserRole(role);
-       // Auto-show Admin Board for Admin users
+    
        if (role === "Admin") {
          setShowAdminBoard(true);
          setShowMyCourses(false);
        }
-       // Load Trainings
+  
        await loadTrainings(sp);
-       // Load Enrollments
        await loadEnrollments(sp);
      }
      catch (err) {
@@ -574,7 +554,4 @@ return (
 );
 };
 
-// ============================================================
-// EXPORT
-// ============================================================
 export default TrainingPortal;

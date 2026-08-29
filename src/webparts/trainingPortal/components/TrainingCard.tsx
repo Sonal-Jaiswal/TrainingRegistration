@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PrimaryButton } from "@fluentui/react";
+import { IButtonStyles, PrimaryButton } from "@fluentui/react";
 import { ITraining } from "./TrainingModels";
 import styles from "./styles/TrainingCard.styles";
 
@@ -11,6 +11,13 @@ interface IProps {
 }
 
 const TrainingCard: React.FC<IProps> = ({ training, userRole, onEnroll, isEnrolled }) => {
+  const buttonStyles: Partial<IButtonStyles> = {
+    root: {
+      width: "100%",
+      borderRadius: 6
+    }
+  };
+
   return (
     <div style={styles.card}>
       <div style={styles.header}>
@@ -38,12 +45,11 @@ const TrainingCard: React.FC<IProps> = ({ training, userRole, onEnroll, isEnroll
       </div>
 
       {userRole === "Employee" && (
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         <PrimaryButton
           text={isEnrolled ? "Already Enrolled" : (training.AvailableSeats > 0 ? "Enroll Now" : "Fully Booked")}
           disabled={isEnrolled || training.AvailableSeats <= 0}
           onClick={() => onEnroll(training)}
-          styles={{ root: styles.enrollButton as any }}
+          styles={buttonStyles}
         />
       )}
     </div>

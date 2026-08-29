@@ -16,10 +16,10 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "rishi description"
+        "default": "training-portal description"
       },
       "longDescription": {
-        "default": "rishi description"
+        "default": "training-portal description"
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -28,7 +28,7 @@
     "features": [
       {
         "title": "TrainingPortal Feature",
-        "description": "The feature that activates elements of the rishi solution.",
+        "description": "The feature that activates elements of the training-portal solution.",
         "id": "1eb85d2a-cc02-46df-9a48-d6bb00062160",
         "version": "1.0.0.0"
       }
