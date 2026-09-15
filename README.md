@@ -1,4 +1,4 @@
-# rishi
+# Training Registration SPFx Object
 
 ## Summary
 
